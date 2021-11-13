@@ -1,0 +1,112 @@
+# ม.6 แบมแบม สุพิชชา วิเศษเจริญ wisescharoen_s@silpakorn.edu 
+
+'''
+
+code ชุดนี้ใช้เพื่อในการคำนวนเกรดเฉลี่ยจากคะแนนในแต่ละรายวิชาที่ท่านได้รับ
+
+'''
+
+score_stat = 'Yes'
+Finish = 'No'
+# ประกาศตัวแปร score_stat = 'Yes' และ Finish = 'No' เพื่อนำไปใช้ในการจบ loop while
+
+while score_stat == 'Yes': 
+  # เปิด loop while ซึ่งตรงนี้จะเรียกเป็น while(0) เพื่อให้คำสั่งภายใน loop ทั้งหมดรันต่อเนื่องไปเรื่อยๆ ตราบใดที่ score_stat ยังมีค่าเป็น YeeYes
+    ready=(input("Want to start? (Yes/No): "))
+    # ประกาศให้ ready เป็นตัวแปรที่ได้รับค่ามาจากคำถาม Want to start? 
+
+    while (ready != 'Yes' and ready != 'No'):
+      # เปิด loop while นี้ ซึ่งขอเรียกเป็น while(1) 
+      # จะรัน loop while(1) ก็ต่อเมื่อตัวแปร ready ที่ได้รับมาไม่ได้มีค่าเป็น Yes หรือ No เท่านั้น
+      print ("Invalid Answer, Try again")  
+      # แสดงผลว่า Invalid Answer, Try again
+      break
+      # ออกจาก loop while (1)
+      
+
+    while ready == 'Yes':
+      # เปิด loop while(2) จะรันคำสั่งใน loop while(2) ก็ต่อเมื่อ ตัวแปร ready ที่ได้รับค่ามามีแค่เป็น Yes เท่านั้น
+
+            point=eval(input("Enter your score: "))
+            # ประกาศให้ point เป็นตัวแปรที่ได้รับค่ามาจากการป้อนข้อมูลของผู้ใช้ ผ่านคำโจทย์ Enter your score: 
+
+            if (point>=80 and point<=100):
+              #เปิด if(1) ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 80 แต่น้อยกว่า 100 หรือไม่
+              print("grade = 4.00")
+              # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 4
+              ready=(input("Want to start? (Yes/No): "))
+              # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+            else:
+              # ถ้าไม่ใช่ เปิด else (1) 
+              if (point>=75 and point<=100):
+                # เปิด if(2) ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 75 แต่น้อยกว่า 100 หรือไม่
+                print("grade = 3.50")
+                # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 3.5
+                ready=(input("Want to start? (Yes/No): "))
+                # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+              else :
+                # ถ้าไม่ใช่ จะมาต่อ else(2) 
+                if (point>=70 and point<=100):
+                  # ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 70 แต่น้อยกว่า 100 หรือไม่
+                  print("grade = 3.00")
+                  # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 3
+                  ready=(input("Want to start? (Yes/No): "))
+                  # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                else :
+                  # ถ้าไม่ใช่ มาต่อ else (3)
+                  if (point>=65 and point<=100):
+                    # ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 65 แต่น้อยกว่า 100 หรือไม่
+                    print("grade = 2.50")
+                    # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 2.5
+                    ready=(input("Want to start? (Yes/No): "))
+                    # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                  else :
+                    # ถ้าไม่ใช่ มาต่อ else (4)
+                    if (point>=60 and point<=100):
+                      # ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 60 แต่น้อยกว่า 100 หรือไม่
+                      print("grade = 2.00")
+                      # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 2
+                      ready=(input("Want to start? (Yes/No): "))
+                      # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                    else:
+                      # ถ้าไม่ใช่ มาต่อ else (5)
+                      if (point>=55 and point<=100):
+                        # ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 55 แต่น้อยกว่า 100 หรือไม่
+                        print("grade = 1.50")
+                        # ให้แสดงผลว่า ได้เกรด 1.5
+                        ready=(input("Want to start? (Yes/No): "))
+                        # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                      else:
+                        # ถ้าไม่ใช่ มาต่อ else (6)
+                        if (point>=50 and point<=100):
+                          # ตรวจสอบว่าคะแนนมากกว่าหรือเท่ากับ 50 แต่น้อยกว่า 100 หรือไม่
+                          print("grade = 1.00")
+                          # ให้แสดงผลว่า ได้เกรด 1
+                          ready=(input("Want to start? (Yes/No): "))
+                          # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                        else:
+                          # ถ้าไม่ใช่ มาต่อ else (7)
+                          if (point>=0 and point<50):
+                            # ตรวจสอบว่าคะแนนมากกว่า 0 และน้อยกว่า 50 หรือไม่
+                            print("grade=0.00")
+                            # ถ้าใช่ ให้แสดงผลว่า ได้เกรด 0
+                            print("You failed")
+                            # ถ้าใช่ ให้แสดงผลว่า คุณสอบตก
+                            ready=(input("Want to start? (Yes/No): "))
+                            # ประกาศให้รับค่า ready จากคำถาม Want to start? (Yes/No):
+                          else:
+                            # ถ้าตรงกับทั้งหมดที่กล่าวมาข้างต้น มาต่อที่ else (8)
+                            print ("Invalid Score, Try again")
+                            # แสดงผลว่า Invalid Score, Try again
+                            continue
+                            # วน loop while (2) ใหม่
+    while ready == 'No': 
+      # เปิด loop while(3) จะรันคำสั่งใน loop while(2) ก็ต่อเมื่อ ตัวแปร ready ที่ได้รับค่ามามีแค่เป็น No เท่านั้น
+        print ("Thank you, See you again")
+        # แสดงผลว่า Thank you, See you again
+        score_stat = Finish
+        # ประกาศให้ตัวแปร score_stat มีค่าเป็น Finish, ซึ่งตัวแปร Finish ถูกประกาศไว้ว่ามีค่า เป็น No ทำให้ค่าใน score_stat ไม่ใช่ Yes ซึ่งไม่ตรงกับเงื่อนไขในการรัน loop while(2) ทำให้ไม่รันคำสั่งทั้งหมดใน loop while(2)
+        break
+        # ออกจาก loop while (3) เป็นอันเสร็จสิ้นการทำงาน
+ 
+
