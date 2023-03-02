@@ -1,1 +1,1 @@
-# CheckYourGrade_ITX - ตรวจสอบเกรดจากคะแนน ( First time Python )
+# CheckYourGrade_ITX - ตรวจสอบเกรดจากคะแนน
